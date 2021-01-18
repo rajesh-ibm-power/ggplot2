@@ -27,7 +27,7 @@ bioc_required: true
 addons:
   apt:
     packages:
-      - libc6-dev-i386
+      - libv8-dev
        
 after_success:
   - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
