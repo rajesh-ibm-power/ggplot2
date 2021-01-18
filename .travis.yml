@@ -24,5 +24,11 @@ r_packages:
   
 bioc_required: true
 
+addons:
+   apt:
+    update: true
+    packages: 
+       - gdebi
+       
 after_success:
   - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
